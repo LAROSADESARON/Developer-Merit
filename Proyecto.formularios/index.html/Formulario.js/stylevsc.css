@@ -1,0 +1,265 @@
+/* ===========================
+   Estilos base
+   =========================== */
+
+:root {
+  /* Colores suaves y limpios */
+  --color-fondo: #f7fdf8;
+  --color-principal: #2f855a;   /* Verde saludable */
+  --color-secundario: #f6ad55;  /* Naranja suave */
+  --color-texto: #1a202c;
+  --color-texto-suave: #4a5568;
+  --color-borde-suave: #e2e8f0;
+  --color-alerta: #e53e3e;      /* Para avisos de gluten */
+  --color-ok: #38a169;          /* Para “sin gluten” */
+
+  --fuente-base: "Segoe UI", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuente-base);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* ===========================
+   Estructura general
+   =========================== */
+
+header,
+footer {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-borde-suave);
+  padding: 1rem 2rem;
+}
+
+header h1,
+header p {
+  margin: 0;
+}
+
+main {
+  padding: 1.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   Navegación
+   =========================== */
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--color-principal);
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  border-color: var(--color-principal);
+  background-color: #e6fffa;
+  outline: none;
+}
+
+/* ===========================
+   Titulares y texto
+   =========================== */
+
+h1, h2, h3 {
+  color: var(--color-principal);
+  margin-top: 0;
+}
+
+p {
+  color: var(--color-texto-suave);
+}
+
+/* ===========================
+   Secciones destacadas
+   =========================== */
+
+.seccion {
+  background-color: #ffffff;
+  border: 1px solid var(--color-borde-suave);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.seccion--importante {
+  border-left: 6px solid var(--color-principal);
+}
+
+.seccion--alerta {
+  border-left: 6px solid var(--color-alerta);
+  background-color: #fff5f5;
+}
+
+/* ===========================
+   Etiquetas “Sin gluten” / “Contiene gluten”
+   =========================== */
+
+.etiqueta {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.etiqueta--sin-gluten {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.etiqueta--con-gluten {
+  background-color: #fed7d7;
+  color: #742a2a;
+}
+
+/* ===========================
+   Listas de recetas / tarjetas
+   =========================== */
+
+.grid-recetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta-receta {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid var(--color-borde-suave);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tarjeta-receta h3 {
+  margin: 0;
+}
+
+.tarjeta-receta p {
+  margin: 0;
+}
+
+/* ===========================
+   Formularios (contacto, sugerencias)
+   =========================== */
+
+form {
+  max-width: 500px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid var(--color-borde-suave);
+  padding: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-top: 0.8rem;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-borde-suave);
+  font-family: var(--fuente-base);
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-principal);
+  outline-offset: 1px;
+  border-color: var(--color-principal);
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--color-principal);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: #276749;
+}
+
+/* ===========================
+   Enlaces “Subir al inicio / Ir al final”
+   =========================== */
+
+.enlaces-navegacion {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.enlaces-navegacion a {
+  color: var(--color-principal);
+  text-decoration: none;
+  margin-right: 0.8rem;
+}
+
+.enlaces-navegacion a:hover,
+.enlaces-navegacion a:focus {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+footer {
+  border-top: 1px solid var(--color-borde-suave);
+  border-bottom: none;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+}
+
+/* ===========================
+   Responsivo básico
+   =========================== */
+
+@media (max-width: 600px) {
+  header,
+  main,
+  footer {
+    padding: 1rem;
+  }
+}

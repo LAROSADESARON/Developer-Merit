@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla 3.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Ejercicio X</h1>
+    <form>
+        <label class="head" for="textbox">Nombre:</label>
+        <input type="text" id="name" placeholder="introduce tu nombre"><br>
+
+        <fieldset>
+			<label class="head">Rol:</label><br>
+			<div class="radio-group">
+				<input type="radio" id="radio1" name="radios" value="Desarollador">
+				<label for="radio1">Desarollador</label>
+			</div>
+			<div class="radio-group">
+				<input type="radio" id="radio2" name="radios" value="Diseñador">
+				<label for="radio2">Diseñador</label>
+			</div>
+			<div class="radio-group">
+				<input type="radio" id="radio3" name="radios" value="Gerente">
+				<label for="radio3">Gerente</label>
+			</div>
+		</fieldset><br>
+
+        <fieldset>
+			<label class="head">Seleccionar:</label><br>
+			<div class="checkbox-group">
+				<input type="checkbox" id="check1" name="checks" value="web">
+				<label for="check1">Desarollo web</label>
+			</div>
+			<div class="checkbox-group">
+				<input type="checkbox" id="check2" name="checks" value="grafico">
+				<label for="check2">Diseño Gráfico</label>
+			</div>
+			<div class="checkbox-group">
+				<input type="checkbox" id="check3" name="checks" value="gestion">
+				<label for="check3">Gestión de proyectos</label>
+			</div>
+		</fieldset>
+		
+		<label class="head" for="textbox">Numero:</label>
+        <input type="text" id="numero">
+
+        <button type="button" onclick="enviar()">Enviar</button>
+		<button type="button" onclick="reiniciar()">Reiniciar</button>	
+    </form>
+    <script src="formulario.14.js"></script>
+</body>
+</html>
